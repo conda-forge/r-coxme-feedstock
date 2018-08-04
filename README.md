@@ -14,14 +14,16 @@ Summary: Cox proportional hazards models containing Gaussian random effects, als
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-coxme-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-coxme-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-coxme-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-coxme-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-coxme-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-coxme-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-coxme-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-coxme-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-coxme-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-coxme-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-coxme-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-coxme-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-coxme/badges/version.svg)](https://anaconda.org/conda-forge/r-coxme)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-coxme/badges/downloads.svg)](https://anaconda.org/conda-forge/r-coxme)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--coxme-green.svg)](https://anaconda.org/conda-forge/r-coxme) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-coxme.svg)](https://anaconda.org/conda-forge/r-coxme) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-coxme.svg)](https://anaconda.org/conda-forge/r-coxme) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-coxme.svg)](https://anaconda.org/conda-forge/r-coxme) |
 
 Installing r-coxme
 ==================

@@ -15,7 +15,8 @@ source:
   sha256: 672753bfcbdfb6e01a7edc4e6f0f3a99e6148b7cef016f3aef6b415e0ae06a49
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -23,14 +24,15 @@ build:
 
 requirements:
   build:
+    - posix                # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+  host:
     - r-base
     - r-matrix >=1.0
     - r-bdsmatrix
     - r-nlme
     - r-survival >=2.36.14
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
 
   run:
     - r-base
@@ -38,7 +40,6 @@ requirements:
     - r-bdsmatrix
     - r-nlme
     - r-survival >=2.36.14
-    - libgcc  # [not win]
 
 test:
   commands:
