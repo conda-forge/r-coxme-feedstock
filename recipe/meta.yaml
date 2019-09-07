@@ -1,4 +1,4 @@
-{% set version = '2.2-10' %}
+{% set version = '2.2-14' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/coxme_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/coxme/coxme_{{ version }}.tar.gz
-  sha256: e235e4711b14c0c0fcc2ca06038fbc81f2309fe0fb49fa0567adfb3c180ee48a
+  sha256: ef83c1ef4de03f564f614bc3ab6151d44854567c9c860150de30ecc10871955d
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -50,10 +50,15 @@ test:
 about:
   home: https://CRAN.R-project.org/package=coxme
   license: LGPL-2
-  summary: Cox proportional hazards models containing Gaussian random effects, also known as
-    frailty models.
+  summary: This package fits Cox proportional hazards models containing both  fixed and random
+    effects.  The random effects can have a general form, of which familial interactions
+    (a "kinship" matrix) is a particular special case.  Note that the simplest case
+    of a mixed effects Cox model, i.e. a single random  per-group intercept, is also
+    called a "frailty" model.  The approach is based on Rippatti and Palgren, Biometrics
+    2002.
   license_family: LGPL
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2'
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2'
 
 extra:
   recipe-maintainers:
@@ -62,19 +67,19 @@ extra:
 # Title: Mixed Effects Cox Models
 # Priority: optional
 # Package: coxme
-# Version: 2.2-10
-# Depends: survival (>= 2.36.14), methods, bdsmatrix(>= 1.3)
+# Version: 2.2-14
+# Depends: survival (>= 2.36.14), methods, bdsmatrix(>= 1.3), R(>= 2.10)
 # Imports: nlme, Matrix (>= 1.0)
 # Suggests: mvtnorm, kinship2
 # LinkingTo: bdsmatrix
 # LazyData: Yes
 # LazyLoad: Yes
 # Authors@R: person(c("Terry", "M."), "Therneau", role=c("aut", "cre"), email="therneau@mayo.edu")
-# Description: Cox proportional hazards models containing Gaussian random  effects, also known as frailty models.
+# Description: This package fits Cox proportional hazards models containing both  fixed and random effects.  The random effects can have a general form, of which familial interactions (a "kinship" matrix) is a particular special case.  Note that the simplest case of a mixed effects Cox model, i.e. a single random  per-group intercept, is also called a "frailty" model.  The approach is based on Rippatti and Palgren, Biometrics 2002.
 # License: LGPL-2
 # NeedsCompilation: yes
-# Packaged: 2018-05-11 12:10:40 UTC; therneau
+# Packaged: 2019-07-03 17:31:43 UTC; therneau
 # Author: Terry M. Therneau [aut, cre]
 # Maintainer: Terry M. Therneau <therneau@mayo.edu>
 # Repository: CRAN
-# Date/Publication: 2018-05-13 16:48:05 UTC
+# Date/Publication: 2019-07-04 05:10:05 UTC

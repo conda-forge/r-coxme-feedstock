@@ -7,7 +7,7 @@ Package license: LGPL-2
 
 Feedstock license: BSD 3-Clause
 
-Summary: Cox proportional hazards models containing Gaussian random effects, also known as frailty models.
+Summary: This package fits Cox proportional hazards models containing both  fixed and random effects.  The random effects can have a general form, of which familial interactions (a "kinship" matrix) is a particular special case.  Note that the simplest case of a mixed effects Cox model, i.e. a single random  per-group intercept, is also called a "frailty" model.  The approach is based on Rippatti and Palgren, Biometrics 2002.
 
 
 
@@ -76,7 +76,12 @@ Current build status
       </details>
     </td>
   </tr>
-![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
+  <tr>
+    <td>Linux_ppc64le</td>
+    <td>
+      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
+    </td>
+  </tr>
 </table>
 
 Current release info
