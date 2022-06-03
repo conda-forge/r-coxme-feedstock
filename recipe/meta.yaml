@@ -1,4 +1,4 @@
-{% set version = "2.2-16" %}
+{% set version = "2.2-17" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/coxme_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/coxme/coxme_{{ version }}.tar.gz
-  sha256: a0ce4b5649c4c1abbfe2c2bf23089744d1f66eb8368dea16e74e090f366a5111
+  sha256: dd0565f97adb7ff978d1dbd6cb7d6e44edee5e2a31cf6d5d4806a0151d1b1318
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -50,15 +50,11 @@ test:
 about:
   home: https://CRAN.R-project.org/package=coxme
   license: LGPL-2
-  summary: This package fits Cox proportional hazards models containing both  fixed and random
-    effects.  The random effects can have a general form, of which familial interactions
-    (a "kinship" matrix) is a particular special case.  Note that the simplest case
-    of a mixed effects Cox model, i.e. a single random  per-group intercept, is also
-    called a "frailty" model.  The approach is based on Rippatti and Palgren, Biometrics
-    2002.
+  summary: This package fits Cox proportional hazards models containing both  fixed and random effects.  The random effects can have a general form, of which familial interactions (a "kinship" matrix) is a particular special case.  Note that the simplest case of a mixed effects Cox model, i.e. a single random  per-group
+    intercept, is also called a "frailty" model.  The approach is based on Rippatti and Palgren, Biometrics 2002.
   license_family: LGPL
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2
 
 extra:
   recipe-maintainers:
