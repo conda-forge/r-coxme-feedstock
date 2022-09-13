@@ -1,4 +1,4 @@
-{% set version = "2.2-17" %}
+{% set version = "2.2-18" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/coxme_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/coxme/coxme_{{ version }}.tar.gz
-  sha256: dd0565f97adb7ff978d1dbd6cb7d6e44edee5e2a31cf6d5d4806a0151d1b1318
+  sha256: b0d7ac647a08c01c26b8687f05b2b86c4704ef3173b910ff83b127ab405aa6ee
 
 build:
   merge_build_host: true  # [win]
