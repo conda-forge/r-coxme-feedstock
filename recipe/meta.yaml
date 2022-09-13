@@ -28,6 +28,7 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-matrix >=1.0
@@ -49,7 +50,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=coxme
-  license: LGPL-2
+  license: LGPL-2.0-only
   summary: This package fits Cox proportional hazards models containing both  fixed and random effects.  The random effects can have a general form, of which familial interactions (a "kinship" matrix) is a particular special case.  Note that the simplest case of a mixed effects Cox model, i.e. a single random  per-group
     intercept, is also called a "frailty" model.  The approach is based on Rippatti and Palgren, Biometrics 2002.
   license_family: LGPL
