@@ -1,4 +1,4 @@
-{% set version = "2.2-20" %}
+{% set version = "2.2-22" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/coxme_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/coxme/coxme_{{ version }}.tar.gz
-  sha256: a0eeeadaabe81458b4fe80d26ca9770ff17dc3a2a41a37b2d1b09fadb887cb62
+  sha256: 1bb492ea8cd5273a0361a0ec5525e799f33d9aa09e6dfd2a365a38a4673ae126
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
